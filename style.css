@@ -100,7 +100,7 @@ h2 {
 
 .container {
     display: block;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     padding-top: 4em;
@@ -115,7 +115,7 @@ h2 {
 
 p {
     font-size: 13pt;
-    color: #888;
+    color: #6cdd85;
     line-height: 1.7em;
     font-weight: lighter;
 }
@@ -198,7 +198,6 @@ img {
   Class applied to choice links
 */
 .choice a, .choice span {
-    font-size: 15pt;
 }
 
 /* 
@@ -255,7 +254,7 @@ img {
 */
 
 body.dark {
-    background: black;
+    background: #0c110d;
     color: white;
 }
 
@@ -264,7 +263,7 @@ body.dark {
 }
 
 .dark .container {
-    background: black;
+    background: transparent;
 }
 
 .dark .written-in-ink {
@@ -308,20 +307,31 @@ body.dark {
 /* Choix sélectionné */
 
 .choice-wrapper{
-    gap: 20px;
+    gap: 10px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.choice-wrapper::before{
+    content:'';
+    height:1px;
+    width:100%;
+    display:block;
+    background: #6cdd85;
 }
 .choice.selected {
     padding: 15px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     border-radius: 3px;
+    flex-grow: 1;
+    width: fit-content;
+    align-self: flex-end;
 }
 
 /* Texte du choix sélectionné avec flèche */
 .chosen-choice {
     color: #6cdd85;
-    font-weight: bold;
     display: inline-block;
 }
 
@@ -340,11 +350,20 @@ body.dark {
 
 /* Animation pour la transition */
 .choice {
+    background:rgba(10,10,10,0);
     transition: all 0.3s ease;
-    margin: 8px 0;
+    margin: 0;
     border: 1px solid #25492d;
+    max-width: 42%;
+    display: flex;
     padding: 10px 20px;
     flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice:hover{
+    background:rgba(25,100,80,0.6);
 }
 
 /* Style pour les choix normaux (liens) */
