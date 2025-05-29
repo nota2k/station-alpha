@@ -242,7 +242,7 @@
                         }
 
                         // Changer le style du choix sélectionné
-                        choiceAnchorEl.outerHTML = `<span class='chosen-choice'>➤ ${choiceAnchorEl.textContent}</span>`;
+                        choiceAnchorEl.outerHTML = `<span class='chosen-choice'>${choiceAnchorEl.textContent}</span>`;
 
                         // Tell the story where to go next
                         story.ChooseChoiceIndex(choice.index);

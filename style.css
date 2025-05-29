@@ -313,12 +313,9 @@ body.dark {
     justify-content: space-around;
 }
 .choice.selected {
-    /* background-color: rgba(100, 149, 237, 0.2); */
-    border-top: 2px solid #6cdd85;
     padding: 15px;
     margin: 10px 0;
     border-radius: 3px;
-    border-bottom: 2px solid #6cdd85;
 }
 
 /* Texte du choix sélectionné avec flèche */
@@ -345,8 +342,9 @@ body.dark {
 .choice {
     transition: all 0.3s ease;
     margin: 8px 0;
-    border: 1px solid;
-    padding: 10px;
+    border: 1px solid #25492d;
+    padding: 10px 20px;
+    flex-grow: 2;
 }
 
 /* Style pour les choix normaux (liens) */
@@ -354,7 +352,7 @@ body.dark {
     color:  #6cdd85;
     text-decoration: none;
     /* border-bottom: 1px dotted #4A90E2; */
-    padding: 2px 0;
+    /* padding: 2px 0; */
     transition: color 0.2s ease;
 }
 
@@ -368,8 +366,8 @@ body.dark {
 /* Thème sombre */
 body.dark .choice.selected {
     /* background-color: rgba(100, 149, 237, 0.15); */
-    border-left-color: #6cdd85;
-    text-align: right;
+    /* border-left-color: #6cdd85; */
+    /* text-align: right; */
 }
 
 body.dark .chosen-choice {
@@ -386,6 +384,7 @@ body.dark .disabled-choice {
 
 body.dark .choice a {
     color:  #6cdd85;
+    font-size: 1em;
     font-weight: 500;
 }
 
