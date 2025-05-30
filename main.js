@@ -417,11 +417,12 @@
 
         // Check whether the OS/browser is configured for dark mode
         var browserDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-        if (savedTheme === "dark"
-            || (savedTheme == undefined && globalTagTheme === "dark")
-            || (savedTheme == undefined && globalTagTheme == undefined && browserDark))
-            document.body.classList.add("dark");
+        savedTheme === "dark"
+        document.body.classList.add("dark");
+        // if (savedTheme === "dark"
+        //     || (savedTheme == undefined && globalTagTheme === "dark")
+        //     || (savedTheme == undefined && globalTagTheme == undefined && browserDark))
+        //     document.body.classList.add("dark");
     }
 
     // Used to hook up the functionality for global functionality buttons
